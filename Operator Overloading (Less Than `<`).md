@@ -1,31 +1,41 @@
-# 🐍 Python OOP: Operator Overloading (Less Than `<`)
+#  Python OOP: Operator Overloading (Less Than `<`)
 
-## 🎯 AIM
 
-To write a Python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class.
+##  AIM:
+To write a Python program that overloads the less-than (<) operator using the __lt__() method to compare two objects based on their attributes.
 
----
+##  ALGORITHM:
 
-## 🧠 ALGORITHM
+1.Start the program.
 
-1. **Create Class `A`**:
-   - Define the `__init__()` method to initialize the object with a value `a`.
+2.Define a class (e.g., Student).
 
-2. **Overload the `<` Operator**:
-   - Define the `__lt__()` method with logic:
-     - If `self.a < o.a`, return `"ob1 is less than ob2"`
-     - Else, return `"ob2 is less than ob1"`
+3.Create a constructor (__init__) to initialize object attributes
+(example: marks).
 
-3. **Create Objects**:
-   - Instantiate two objects `ob1` and `ob2` with values.
+4.Overload the less-than operator by defining the method:
+5.Use the < operator to compare the objects.
 
-4. **Use `<` Operator**:
-   - Use `print(ob1 < ob2)` to trigger the overloaded behavior.
+6.Display the comparison result based on the overloaded method.
 
----
+7.End the program.
+##  PROGRAM:
+```
+class marks:
+    def __init__(self, x):
+        self.x = x
+    def __lt__(self, other):
+        return self.x <= other.x
 
-## 💻 Program
 
-## Output
+obj1 = marks(20)
+obj2 = marks(10)
 
-## Result
+print(obj1 < obj2)
+
+```
+## OUTPUT
+<img width="351" height="163" alt="image" src="https://github.com/user-attachments/assets/97f32c06-8796-4901-a7a0-9713dd837f9b" />
+
+## RESULT
+Thus, the Python program successfully overloads the less-than (<) operator using the __lt__() method and compares two objects based on their attribute values. This demonstrates the concept of operator overloading in Python, allowing user-defined classes to use built-in operators for meaningful comparisons.
