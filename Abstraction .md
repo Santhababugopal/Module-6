@@ -1,12 +1,12 @@
-# 🐍 Python OOP: Abstract Class & Method Example
+#  Python OOP: Abstract Class & Method Example
 
-## 🎯 AIM
+##  AIM
 
 To create an **abstract class** named `Shape` with an **abstract method** `calculate_area`, and implement this method in two subclasses: `Rectangle` and `Circle`.
 
 ---
 
-## 🧠 ALGORITHM
+##  ALGORITHM
 
 1. **Import ABC module**:
    - Use `from abc import ABC, abstractmethod` to define abstract classes and methods.
@@ -28,8 +28,33 @@ To create an **abstract class** named `Shape` with an **abstract method** `calcu
 
 ---
 
-## 💻 Program
+##  Program
+```
 
+from abc import ABC,abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def calculate_area(self):
+        pass
+class Rectangle(Shape):
+    length = 5
+    breadth =3 
+    def calculate_area(self):
+        return self.length * self.breadth
+
+class Circle(Shape):
+  radius = 4
+  def calculate_area(self):
+      return 3.14 * self.radius * self.radius
+
+rec=Rectangle()
+cir=Circle()
+print("Area of a rectangle:", rec.calculate_area()) #call to 'calculate_area' method defined inside the class 'Rectangle'
+print("Area of a circle:", cir.calculate_area()) #call to 'calculate_area' method defined inside the class 'Circle'.
+```
 ## Output
+<img width="588" height="184" alt="image" src="https://github.com/user-attachments/assets/7b105b6d-b793-4334-b38c-d674c5cb0775" />
 
 ## Result
+The program successfully demonstrates the concept of abstract classes and method overriding in Python.
+The abstract class Shape defines the structure, and the subclasses Rectangle and Circle implement their own versions of the calculate_area() method.
