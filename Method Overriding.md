@@ -1,20 +1,40 @@
-# 🐟 Method Overriding-Fish and Shark Class Inheritance in Python
+#  Method Overriding-python program to overload less than operator (compare obj1 and obj2)
 
-## 🧠 AIM:
-To write a Python program that demonstrates class inheritance by creating a parent class `Fish` with a method `type`, and a child class `Shark` that overrides the `type` method.
+##  AIM:
+To write a Python program that overloads the less-than (<) operator using the __lt__() method to compare two objects based on their attributes.
 
-## 📋 ALGORITHM:
+##  ALGORITHM:
 
-1. Define the `Fish` class with a method named `type()` that prints `"fish"`.
-2. Define the `Shark` class as a subclass of `Fish`, and override the `type()` method to print `"shark"`.
-3. Create an instance of the `Fish` class named `obj_goldfish`.
-4. Create an instance of the `Shark` class named `obj_hammerhead`.
-5. Use a `for` loop to iterate over both objects.
-6. Within the loop, call the `type()` method using the loop variable.
-7. Output will demonstrate method overriding: printing `"fish"` and `"shark"` accordingly.
+1.Start the program.
 
-## 💻 PROGRAM:
+2.Define a class (e.g., Student).
 
+3.Create a constructor (__init__) to initialize object attributes
+(example: marks).
+
+4.Overload the less-than operator by defining the method:
+5.Use the < operator to compare the objects.
+
+6.Display the comparison result based on the overloaded method.
+
+7.End the program.
+##  PROGRAM:
+```
+class marks:
+    def __init__(self, x):
+        self.x = x
+    def __lt__(self, other):
+        return self.x <= other.x
+
+
+obj1 = marks(20)
+obj2 = marks(10)
+
+print(obj1 < obj2)
+
+```
 ## OUTPUT
+<img width="351" height="163" alt="image" src="https://github.com/user-attachments/assets/97f32c06-8796-4901-a7a0-9713dd837f9b" />
 
 ## RESULT
+Thus, the Python program successfully overloads the less-than (<) operator using the __lt__() method and compares two objects based on their attribute values. This demonstrates the concept of operator overloading in Python, allowing user-defined classes to use built-in operators for meaningful comparisons.
