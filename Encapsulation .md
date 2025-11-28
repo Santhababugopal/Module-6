@@ -1,51 +1,41 @@
-#  Python OOP: Create a Class  Student with the private members name and age ,Add getter and setter to initialize the age variable
+#  Python OOP: Encapsulation with Private Members
 
 ##  AIM
-
-To create a Python class Student with private data members name and age, and to implement getter and setter methods to access and modify the private age variable.
+To implement Encapsulation in Python by defining a class Rectangle with private member variables __length and __breadth.
 
 
 ##  ALGORITHM
 
-1.Start the program.
+1.Define the Class:
 
-2.Define the class Student.
+Create a class Rectangle with two private attributes: __length and __breadth.
+2.Initialize Variables:
 
-3.Inside the class:
+Use the __init__() constructor to set initial values for __length and __breadth.
+3.Print Values:
 
-4.Declare private members:
+Display the private variables from within the class to demonstrate access.
+4.Instantiate the Object:
 
-__name
+Create an object of the Rectangle class to trigger the constructor.
 
-__age
-
-5.Create a constructor __init__() to initialize the private variables.
-
-6.Create a getter method get_age() to return the value of __age.
-
-7.End the program.
 
 ##  Program
 ```
 
-class Student:
-    def __init__(self, name, age):
-        self.name = name
-        self.__age = age
-    def set_age(self,age):
-        self.__age=age
-    def get_age(self):
-        return self.__age
-        
-stud = Student('Jessa', 14)
-print('Name:', stud.name, stud.get_age())
-
-stud.set_age(16)
-
-print('Name:', stud.name, stud.get_age())
+class Rectangle:
+    __length = 0 
+    __breadth = 0
+    def __init__(self):
+      self.__length = 5
+      self.__breadth = 3
+      print(self.__length)
+      print(self.__breadth)
+   
+  obj = Rectangle()
 ```
 ## Output
-<img width="522" height="186" alt="image" src="https://github.com/user-attachments/assets/03746f63-cc38-4c93-8015-606045d32a65" />
+<img width="290" height="132" alt="image" src="https://github.com/user-attachments/assets/3df50c49-54d3-4b3e-be8f-056ea7e6cc3b" />
 
 ## Result
-Thus, the Python program successfully creates a class Student with private members name and age, and implements getter and setter methods to safely access and modify the private age variable. This demonstrates the concept of data hiding and encapsulation in Object-Oriented Programming.
+Thus, the program to implement Encapsulation with Private Members in Python was executed successfully and produced the expected result.
